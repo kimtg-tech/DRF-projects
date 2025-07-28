@@ -1,0 +1,30 @@
+# Python 파일
+*.pyc
+__pycache__/
+
+# Django 환경 관련 파일
+db.sqlite3
+*.sqlite3
+
+# 미디어/업로드 파일
+/media/
+*.log
+
+# 테스트 결과
+htmlcov/
+.tox/
+.coverage
+*.cover
+*.py,cover
+*.log
+
+# 가상환경
+venv/
+env/
+
+# IDE 설정 파일
+*.idea/
+*.vscode/
+
+# 기타
+*.swp
