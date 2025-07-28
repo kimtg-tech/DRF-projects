@@ -41,3 +41,20 @@ python manage.py migrate
 -- 127.0.0.1:8000/admin 접속후 계정 만들기
 python manage.py createsuperuser
 (명령어 수행후 계정,비밀번호 입력후 생성)
+
+
+
+가상환경 pip (가상환경 활성화 하고 실행)
+pip freeze > requirements.txt
+
+
+### 1. **실행 명령어`requirements.txt`**
+아래 명령어를 사용하여 에 정의된 라이브러리를 설치합니다: `requirements.txt`
+``` bash
+pip install -r requirements.txt
+```
+### 2. **설치 후 확인**
+설치 후, 아래 명령어로 설치된 패키지들이 제대로 반영되었는지 확인할 수 있습니다:
+``` bash
+pip freeze
+```
