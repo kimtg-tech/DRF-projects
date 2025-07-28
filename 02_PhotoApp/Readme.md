@@ -9,14 +9,14 @@ django-5.2.4
 python -m venv myvenv
 
 -- 가상환경 실행 (윈도우기준)
-venv\Scripts\activate
+myvenv\Scripts\activate
 
 -- 비활성화
 deactivate
 
 
 -- django 설치
- pip install django
+pip install django
 
 -- 새로운 project 생성
 django-admin startproject myweb .
