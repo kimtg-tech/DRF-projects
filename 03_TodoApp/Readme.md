@@ -58,3 +58,30 @@ pip install -r requirements.txt
 ``` bash
 pip freeze
 ```
+
+
+model 생성
+```python
+
+class Todo(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    completed = models.BooleanField(default=False)
+    important = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+```
+
+db 마이그레이션
+```python
+python manage.py makemigrations
+python manage.py migrate
+```
+
+admin.py와 urls.py에 Todo 지정하면 admin에서 입력 가능해짐
+
+
+Todo 전체조회 기능 만들기
+

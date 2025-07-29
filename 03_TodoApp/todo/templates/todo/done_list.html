@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DONE</title>
+</head>
+<body>
+<div class="container">
+    <h1>Todo목록 앱</h1>
+    <p>
+        <a href="{% url 'todo_post' %}">Add Todo</a>
+        <a href="{% url 'done_list' %}">완료한 TODO 목록</a>
+        <a href="{% url 'todo_list' %}">홈으로</a>
+    </p>
+    <ul class="list-group">
+        {% for done in dones %}
+        <li>
+            <a href="{% url 'todo_detail' pk=done.pk %}">{{ done.title }}</a>
+            {% if todo.important %}
+            [중요]
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

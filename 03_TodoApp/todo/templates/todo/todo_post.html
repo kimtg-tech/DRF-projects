@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>입력</title>
+</head>
+<body>
+<div class="container">
+    <h1>TODO 추가하기</h1>
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %} {{ form.as_p }}
+                    <button type="submit">등록</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
